@@ -948,6 +948,25 @@ X-squared = 13.542, df = 4, p-value = 0.008911</code></pre>
 <li>Dotted lines indicate <strong>independence</strong> between the two variables.</li>
 <li>Solid lines indicate <strong>dependence</strong> between the two variables.</li>
 </ul>
+</section>
+<section id="association-plots" class="slide level2">
+<h2>Association plots</h2>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="fu">library</span>(vcd)</span>
+<span id="cb23-2"><a href=""></a><span class="fu">assoc</span>(deer_data, <span class="at">shade =</span> <span class="cn">TRUE</span>, <span class="at">main =</span> <span class="st">"Deer age group and vegetation preference"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="Lecture-07b_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<section id="interpretation-1" class="slide level2">
+<h2>Interpretation</h2>
+<ul>
+<li>Size of cells indicate the number of observations in that category.</li>
+<li>The shadings are made based on the residuals of the chi-squared test (see legend), highlighting which cells contribute most to the chi-squared statistic.</li>
+<li>Colour of the shadings indicate whether they are more or less frequent than expected (again, see legend).</li>
+</ul>
 </section></section>
 <section>
 <section id="what-about-the-test-of-homogeneity" class="title-slide slide level1 center">
@@ -970,6 +989,23 @@ X-squared = 13.542, df = 4, p-value = 0.008911</code></pre>
 <li><span class="math inline">H_1</span>: The variables of interest are not independent.</li>
 </ul></li>
 </ul>
+</section>
+<section id="differences-are-subtle" class="slide level2">
+<h2>Differences are subtle</h2>
+<ul>
+<li>In the test of independence, observational units are collected at random from <strong>a single population</strong> and two (or more) categorical variables are observed for each unit.</li>
+<li>For the deer example, the experimental design would involve randomly sampling deer and recording their age group and vegetation preference.</li>
+</ul>
+<blockquote>
+<p>Is age group independeng of vegetation preference?</p>
+</blockquote>
+<ul>
+<li>In the test of homogeneity, the data are collected by randomly sampling from <strong>two or more subgroups</strong>, and the same categorical variable is observed for each unit.</li>
+<li>For the deer example, the experimental design would have to be modified to sample the vegetation preference of deer from young, adult, and old populations.</li>
+</ul>
+<blockquote>
+<p>Is the distribution of vegetation preference the same if we compare young, adult, and old deer?</p>
+</blockquote>
 </section></section>
 <section>
 <section id="summary" class="title-slide slide level1 center">
@@ -979,8 +1015,9 @@ X-squared = 13.542, df = 4, p-value = 0.008911</code></pre>
 <section id="when-to-use-a-chi-squared-test" class="slide level2">
 <h2>When to use a chi-squared test?</h2>
 <ul>
-<li>If we have <strong>categorical data</strong> and we want to determine whether the observed frequencies differ from the expected frequencies, we can use a <strong>chi-squared test</strong>.</li>
-<li>We’re asking whether the observed incidence of outcomes for each level of the predictor variable could have happened by chance.</li>
+<li>The chi-squared test is not an “alternative” to a parametric test, but is <strong>better suited</strong> for certain types of data and requires delibarate experimental design that collects data in a certain way.</li>
+<li>If we have <strong>categorical data</strong> and we want to determine whether the observed frequencies differ from the expected frequencies, then we can use a <strong>chi-squared test</strong>.</li>
+<li></li>
 </ul>
 <!-- ## Willows -->
 <!-- The diamond leaf willow (*Salix pulcha*) and the Arctic willow (*Salix arctica*) are both found on rocky outcrops in marshy ground in the Arctic tundra. Does the presence of one species affect the presence of the other? -->
