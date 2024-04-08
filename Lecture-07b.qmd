@@ -396,6 +396,21 @@ mosaicplot(deer_data,
 - Dotted lines indicate **independence** between the two variables.
 - Solid lines indicate **dependence** between the two variables.
 
+## Association plots
+
+```{r}
+#| code-fold: true
+
+library(vcd)
+assoc(deer_data, shade = TRUE, main = "Deer age group and vegetation preference")
+
+```
+
+## Interpretation
+
+- Size of cells indicate the number of observations in that category.
+- The shadings are made based on the residuals of the chi-squared test (see legend), highlighting which cells contribute most to the chi-squared statistic.
+- Colour of the shadings indicate whether they are more or less frequent than expected (again, see legend).
 
 # What about the test of homogeneity?
 
@@ -410,15 +425,28 @@ mosaicplot(deer_data,
   - $H_0$: The variables of interest are independent.
   - $H_1$: The variables of interest are not independent.
   
+
+## Differences are subtle
+
+- In the test of independence, observational units are collected at random from **a single population** and two (or more) categorical variables are observed for each unit.
+- For the deer example, the experimental design would involve randomly sampling deer and recording their age group and vegetation preference.
+
+> Is age group independeng of vegetation preference?
+
+- In the test of homogeneity, the data are collected by randomly sampling from **two or more subgroups**, and the same categorical variable is observed for each unit.
+- For the deer example, the experimental design would have to be modified to sample the vegetation preference of deer from young, adult, and old populations.
+
+> Is the distribution of vegetation preference the same if we compare young, adult, and old deer?
+
 # Summary
 
 ## When to use a chi-squared test?
 
-- If we have **categorical data** and we want to determine whether the observed frequencies differ from the expected frequencies, we can use a **chi-squared test**.
-- We're asking whether the observed incidence of outcomes for each level of the
-predictor variable could have happened by chance.
+- The chi-squared test is not an "alternative" to a parametric test, but is **better suited** for certain types of data and requires delibarate experimental design that collects data in a certain way.
+- If we have **categorical data** and we want to determine whether the observed frequencies differ from the expected frequencies, then we can use a **chi-squared test**.
+- 
 
-  
+
 
 
 <!-- ## Willows -->
