@@ -431,7 +431,7 @@ assoc(deer_data, shade = TRUE, main = "Deer age group and vegetation preference"
 - In the test of independence, observational units are collected at random from **a single population** and two (or more) categorical variables are observed for each unit.
 - For the deer example, the experimental design would involve randomly sampling deer and recording their age group and vegetation preference.
 
-> Is age group independeng of vegetation preference?
+> Is age group independent of vegetation preference?
 
 - In the test of homogeneity, the data are collected by randomly sampling from **two or more subgroups**, and the same categorical variable is observed for each unit.
 - For the deer example, the experimental design would have to be modified to sample the vegetation preference of deer from young, adult, and old populations.
