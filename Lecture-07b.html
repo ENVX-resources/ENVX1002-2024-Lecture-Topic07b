@@ -794,7 +794,7 @@ Januar Harianto
 <li>The chi-squared test is a <strong>non-parametric</strong> test, so it does not rely on the assumption of normality. However, it does have some assumptions:
 <ul>
 <li><strong>Independence</strong>: the observations are independent.</li>
-<li><strong>Sample size</strong>: the expected frequency of each category is at least 5, and no more than 20% of the expected frequencies are less than 5.</li>
+<li><strong>Sample size</strong>: the expected frequency of each category is at least 1, and no more than 20% of the expected frequencies are less than 5.</li>
 </ul></li>
 </ul>
 <p>The sample size assumption ensures that the chi-squared distribution is a good approximation of the normal distribution.</p>
@@ -932,9 +932,10 @@ X-squared = 13.542, df = 4, p-value = 0.008911</code></pre>
 <div class="cell">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a><span class="fu">mosaicplot</span>(deer_data, </span>
-<span id="cb22-2"><a href=""></a>  <span class="at">shade =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb22-3"><a href=""></a>  <span class="at">main =</span> <span class="st">"Deer age group and vegetation preference"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href=""></a><span class="fu">mosaicplot</span>(deer_data,</span>
+<span id="cb22-2"><a href=""></a>    <span class="at">shade =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb22-3"><a href=""></a>    <span class="at">main =</span> <span class="st">"Deer age group and vegetation preference"</span></span>
+<span id="cb22-4"><a href=""></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 
 </div>

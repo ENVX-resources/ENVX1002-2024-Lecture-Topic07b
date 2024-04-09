@@ -273,7 +273,7 @@ that allows us to determine whether the observed frequencies of a categorical va
 
 - The chi-squared test is a **non-parametric** test, so it does not rely on the assumption of normality. However, it does have some assumptions:
   - **Independence**: the observations are independent.
-  - **Sample size**: the expected frequency of each category is at least 5, and no more than 20% of the expected frequencies are less than 5.
+  - **Sample size**: the expected frequency of each category is at least 1, and no more than 20% of the expected frequencies are less than 5.
   
 The sample size assumption ensures that the chi-squared distribution is a good approximation of the normal distribution.
 
@@ -383,9 +383,10 @@ The results of the chi-squared test suggest that the age group of the deer is **
 ```{r}
 #| code-fold: true
 
-mosaicplot(deer_data, 
-  shade = TRUE,
-  main = "Deer age group and vegetation preference")
+mosaicplot(deer_data,
+    shade = TRUE,
+    main = "Deer age group and vegetation preference"
+)
 ```
 
 ## Interpretation
